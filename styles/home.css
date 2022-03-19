@@ -30,3 +30,19 @@ body {
 .active:hover::after {
   width: 100%;
 }
+
+
+.center {
+  background-image: url(../images/f1.jpg);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.categories {
+  display: inline-block;
+  margin: auto;
+}
