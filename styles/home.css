@@ -1,0 +1,32 @@
+body {
+  background-image: url("../images/background-home.jpg");
+  background-repeat: no-repeat;
+  background-position: initial;
+  background-size: cover;
+}
+
+#nav_element {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active {
+  position: relative;
+  overflow: hidden;
+}
+
+.active::after {
+  background-color: white;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+.active:hover::after {
+  width: 100%;
+}
