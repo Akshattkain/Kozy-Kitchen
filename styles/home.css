@@ -33,19 +33,26 @@ body {
   margin-top: 300px !important;
 }
 
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .center {
-  background-image: url(../images/f1.jpg);
   width: 200px;
   height: 200px;
+  background-color: rgba(0, 0, 0, 0.32);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  text-align: center;
   color: white;
   font-size: 42px;
 }
 
-.categories {
+.category-container {
   display: inline-block;
   margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-size: cover;
+  margin: 50px;
 } 

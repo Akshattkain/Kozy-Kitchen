@@ -34,11 +34,7 @@
       </div>
     </div>
 
-    <div class="categories">
-      <div class="center">
-        <p>North Indian</p>
-      </div>
-    </div>
+    <div id="categories"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -47,6 +43,29 @@
     ></script>
     <script>
       $("#nav").load("../components/navbar.html");
+
+      var categories = [
+        { url: "../images/indian.png", name: "Indian" },
+        { url: "../images/chinese.png", name: "Chinese" },
+        { url: "../images/italian.png", name: "Italian" },
+        { url: "../images/mexican.png", name: "Mexican" },
+        { url: "../images/american.png", name: "American" },
+        { url: "../images/thai.png", name: "Thai" },
+        { url: "../images/desserts.png", name: "Desserts" },
+        { url: "../images/japanese.png", name: "Japanese" },
+      ];
+
+      document.getElementById("categories").innerHTML = categories
+        .map(
+          (category) =>
+            `<div class="category-container" style="background-image: url(${category.url})">
+            <div class="center">
+              <p>${category.name}</p>
+              </div>
+              </div>
+            `
+        )
+        .join("");
     </script>
   </body>
 </html>
