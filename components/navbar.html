@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #nav_element {
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .navbar {
+        padding: 0 !important;
+      }
+
+      .active {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .active::after {
+        background-color: white;
+        content: "";
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        transition: width 0.35s ease 0s;
+        position: absolute;
+      }
+
+      .active:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-light bg-black"
+      style="background-color: rgba(0, 0, 0, 0.5) !important"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../images/logo.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <a class="nav-link active" id="nav_element" aria-current="page" href="#"
+          >Home</a
+        >
+        <a class="nav-link active" id="nav_element" aria-current="page" href="#"
+          >About</a
+        >
+        <a class="nav-link active" id="nav_element" aria-current="page" href="#"
+          >Community</a
+        >
+        <img src="../icons/person-fill.svg" />
+      </div>
+    </nav>
+  </body>
+</html>
