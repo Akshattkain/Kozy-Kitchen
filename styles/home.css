@@ -22,6 +22,12 @@ body {
   text-indent: 33px;
   border-radius: 30px !important;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-family: 'Alegreya Sans SC';
+  font-size: 28px !important;
+}
+
+.form-input::placeholder {
+  color: #C4C4C4 !important;
 }
 
 .form-input:focus {
@@ -31,6 +37,15 @@ body {
 
 .search-box {
   margin-top: 300px !important;
+}
+
+h2 {
+  font-family: 'Alegreya Sans SC';
+  font-weight: 800 !important;
+  margin: 30px 0 0 50px !important;
+  border-bottom:2px solid black;
+    padding-bottom:2px;
+    display: inline-block;
 }
 
 .categories {
@@ -45,6 +60,13 @@ body {
   border-radius: 50%;
   color: white;
   font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center p {
+  font-family: 'Alegreya Sans SC';
 }
 
 .category-container {
@@ -52,7 +74,6 @@ body {
   margin: auto;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
   background-size: cover;
   margin: 50px;
 } 
