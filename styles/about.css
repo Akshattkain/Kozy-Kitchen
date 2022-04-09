@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/background-about.jpg");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+}
+
+#title {
+    margin: 20px 150px;
+    font-size: 80px;
+    font-family: "Edo";
+    color: white;
+}
+
+.content {
+    width: 500px;
+    margin: 30px 80px;
+}
+
+.content p {
+    font-family: "Open Sans";
+    font-size: 18px;
+    color: white;
+}
+
+.content span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
