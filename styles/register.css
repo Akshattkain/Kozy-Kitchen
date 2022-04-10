@@ -1,0 +1,56 @@
+body {
+    background-image: url("../images/background-register.jpg");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+  }
+
+.card {
+    margin: 10vh 35vw;
+    text-align: center;
+}
+
+h4, .btn {
+    margin: 2vh 0 !important;
+}
+
+h4 {
+    font-family: 'Libre Baskerville';
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 3vh auto !important;
+    border: 0;
+    outline: 0;
+    width: 20vw;
+    background: transparent;
+    border-bottom: 1px solid black;
+    font-family: 'Alegreya Sans SC';
+}
+
+input::placeholder {
+    font-family: 'Alegreya Sans SC';
+    color: lightgrey;
+}
+
+.btn {
+    background-color: #EF8041 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #E96D26 !important;
+}
+
+p span {
+    color: #4385F5;
+}
+
+p span:hover {
+    cursor: pointer;
+}
