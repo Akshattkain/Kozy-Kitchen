@@ -78,21 +78,23 @@ h2 {
   margin: 50px;
 } 
 
-.card {
+/*.card-recipes {
   display: inline-block !important;
-}
+  margin: auto;
+
+}*/
 
 .card-horizontal {
-  display: flex;
+  display: inline-flex;
   flex: 1 1 auto; 
-  position: absolute;
+  position:relative;
   width: 1179px;
   height: 381px;
   left: 125px;
   top: 300px;
   background: linear-gradient(to bottom, orange, #ffff);
   border-radius: 10px;
-  
+  margin: auto;
 }
 
 .card-horizontal img {
@@ -131,8 +133,6 @@ h2 {
   border-radius: 10px;
   text-align: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.264);
-
-
 }
 
 .complexity-level {
