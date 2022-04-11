@@ -21,6 +21,10 @@
       href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
 
@@ -46,19 +50,48 @@
 
     <div id="categories"></div>
 
-    <div class="card-horizontal">
-      <div class="img-square-wrapper">
-        <img class="" src="../images/image 15.jpg" />
+    <br>
+    <br>
+    <br>
+
+
+    <div class="card mb-3" style="max-width: 1040px;" id="recipe-card">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../images/image 15.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" >Fudgy Brownies</h5>
+            <i class="fa fa-heart fa-2x" id="likes-icon"></i>
+            <i class="material-icons" id="share-icon"> share </i>
+            <p class="card-text">Our favorite brownies recipe from scratch.</p>
+            <div class="complexity-btn">
+              <p class="complexity-level" >Complexity: Medium</p>
+            </div>
+            <div class="user-info">
+              <i class="fa fa-user fa-2x" id="user-icon" ></i>
+              <p>User 1</p>
+              <p>
+
+                <i class="material-icons" id="views-icon">visibility</i>
+                <p id="view-count">100 views</p>
+                <br>
+                <i class="material-icons-outlined" id="comments-icon">chat</i>
+                <p id="comments-count">100 comments</p>
+                <br>
+                <i class="fa fa-star fa-2x" id="star-icon"></i>
+                <i class="fa fa-star fa-2x"></i>
+                <i class="fa fa-star fa-2x"></i>
+                <i class="fa fa-star fa-2x"></i>
+                <i class="fa fa-star fa-2x"></i>
+              </p>
+            </div>
+        </div>
       </div>
-      <div class="card-body">
-        <h4 class="card-title">Fudgy Brownies</h4>
-        <p class="card-text">Our favorite brownies recipe from scratch.</p>
-      </div>
-      <div class="complexity-btn">
-        <p class="complexity-level">Complexity: Medium</p>
-      </div>
-      <i class="fa fa-circle-user"></i>
     </div>
+
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
