@@ -1,0 +1,75 @@
+body {
+    background-image: url("../images/background-community.png");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+}
+
+.reset-this {
+    all: initial;
+}
+  
+.fieldset {
+    border: 1px solid black;
+    padding : 10px;
+    display: block;
+    margin: 50px;
+    margin-bottom: 20px;
+} 
+  
+.legend {
+    color: black;
+    font-family: 'Allura';
+    margin-left: 30px;
+    font-size: 50px;
+    font-weight: bold;
+} 
+
+.top-5-table {
+    width: 100%;
+    border-collapse:separate !important; 
+    border-spacing: 0 !important;
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.5em;
+    padding: 0.5em 2em !important;
+}
+.top-5-table td {
+    border-bottom: 1px solid lightgray !important;
+}
+
+.top-5-table td:last-child {
+    text-align: right;
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
+
+.material-icons {
+    font-size: 25px !important;
+    font-weight: bold !important;
+}
+
+.btn p {
+    font-size: 20px;
+    margin: 0 !important;
+    float: right;
+    line-height: 1.35em;
+    font-family: 'Alegreya Sans SC';
+}
+
+.discussions {
+    margin: 0 50px;
+    margin-top: 65px;
+    font-family: 'Alegreya Sans SC';
+}
+
+.discussions h5 {
+    font-weight: bold;
+}
+
+.discussions hr {
+    margin: 10px 0;
+}
