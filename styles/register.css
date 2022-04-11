@@ -51,6 +51,10 @@ p span {
     color: #4385F5;
 }
 
+p span a {
+    text-decoration: none;
+}
+
 p span:hover {
     cursor: pointer;
 }
