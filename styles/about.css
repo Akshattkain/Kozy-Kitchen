@@ -15,11 +15,12 @@ body {
 .content {
     width: 500px;
     margin: 30px 80px;
+    text-align: justify;
 }
 
 .content p {
     font-family: "Open Sans";
-    font-size: 18px;
+    font-size: 25px;
     color: white;
 }
 
@@ -28,3 +29,4 @@ body {
     justify-content: center;
     text-align: center;
 }
+
