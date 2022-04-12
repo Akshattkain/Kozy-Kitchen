@@ -105,13 +105,11 @@ h2 {
 
 .likes-icon {
   margin-left: 30%;
-
 }
 
 .share-icon {
   font-size: 35px; 
   margin-left: 3%;
-  
 }
 
 .user-icon {
@@ -134,21 +132,19 @@ h2 {
   margin-right: 0.36%;
 }
 
+
 .recipe-card {
 
   background: linear-gradient(to bottom, orange, transparent);
   border-radius: 10px;
   margin: auto;
-
-
+  padding: 10px;
 }
 
 .recipe-card .card-title {
-
   font-size: 48px;
   font-family: 'Alegreya Sans SC';
   font-weight: 700;
-
 }
 
 .recipe-card .card-text {
@@ -157,7 +153,6 @@ h2 {
 
 .user-info {
   margin-top: 12%;
-  
 }
 
 .user-info p {
@@ -165,7 +160,6 @@ h2 {
   font-size: 20px;
   margin-left: 2%;
 }
-
 
 .views-icon {
   margin-left: 1670%;
