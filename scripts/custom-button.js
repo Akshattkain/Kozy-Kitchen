@@ -21,7 +21,7 @@ class CustomButton extends HTMLElement {
         margin: 0 !important;
         float: right;
         line-height: 1.5em;
-        font-family: 'Alegreya Sans SC';
+        font-family: 'Alegreya Sans';
     }
         `;
     document.head.appendChild(style);
