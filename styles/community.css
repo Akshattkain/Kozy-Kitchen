@@ -41,23 +41,10 @@ body {
     text-align: right;
 }
 
-.btn {
+.new-discussion-btn {
     position: absolute;
     right: 0;
     margin-right: 50px;
-}
-
-.material-icons {
-    font-size: 25px !important;
-    font-weight: bold !important;
-}
-
-.btn p {
-    font-size: 20px;
-    margin: 0 !important;
-    float: right;
-    line-height: 1.35em;
-    font-family: 'Alegreya Sans SC';
 }
 
 .discussions {

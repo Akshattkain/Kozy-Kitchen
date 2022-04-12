@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(180deg, #EDF5F7 49.48%, rgba(255, 255, 255, 0.49) 100%);
+    background-repeat: no-repeat;
+}
+
+.details {
+    background-image: url("../images/background-profile.png");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    padding: 50px;
+    padding-bottom: 10px;
+}
+
+.profile-icon-container {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.profile-icon {
+    font-size: 135px !important;
+}
