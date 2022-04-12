@@ -103,22 +103,22 @@ h2 {
   margin-left: 2%;
 }
 
-#likes-icon {
+.likes-icon {
   margin-left: 30%;
 
 }
 
-#share-icon {
+.share-icon {
   font-size: 35px; 
   margin-left: 3%;
   
 }
 
-#user-icon {
+.user-icon {
   margin-left: 2%;
 }
 
-#view-count {
+.view-count {
   float: right; 
   line-height: 1.2em; 
   margin-left: 0;
@@ -126,7 +126,7 @@ h2 {
   margin-right: 5.5%;
 }
 
-#comments-count {
+.comments-count {
   float: right; 
   line-height: 1.2em; 
   margin-left: 0; 
@@ -134,7 +134,7 @@ h2 {
   margin-right: 0.36%;
 }
 
-#recipe-card {
+.recipe-card {
 
   background: linear-gradient(to bottom, orange, transparent);
   border-radius: 10px;
@@ -143,7 +143,7 @@ h2 {
 
 }
 
-#recipe-card .card-title {
+.recipe-card .card-title {
 
   font-size: 48px;
   font-family: 'Alegreya Sans SC';
@@ -151,7 +151,7 @@ h2 {
 
 }
 
-#recipe-card .card-text {
+.recipe-card .card-text {
   font-size: 32px;
 }
 
@@ -167,10 +167,10 @@ h2 {
 }
 
 
-#views-icon {
+.views-icon {
   margin-left: 1670%;
 }
 
-#comments-icon {
+.comments-icon {
   margin-left: 80.2%;
 }
