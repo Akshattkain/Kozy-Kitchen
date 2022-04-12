@@ -9,17 +9,28 @@
   <body>
     <nav id="nav"></nav>
 
-    <div class="details">
+    <div class="details-container">
       <div class="profile-icon-container">
         <span class="material-icons-outlined profile-icon"> person </span>
       </div>
-      <div class="profile-details"></div>
-      <custom-button
-        icon="edit"
-        iconSize="1em"
-        text="Edit Profile"
-        textSize="15px"
-      ></custom-button>
+      <div class="profile-details">
+        <h3>User Name</h3>
+        <custom-button
+          icon="edit"
+          iconSize="1em"
+          text="Edit Profile"
+          textSize="15px"
+        ></custom-button>
+        <h5>Full Name</h5>
+        <div class="stats">
+          <span class="material-icons"> fastfood </span>
+          <h6>15 Recipes</h6>
+        </div>
+        <div class="stats">
+          <span class="material-icons"> people_alt </span>
+          <h6>30K Followers</h6>
+        </div>
+      </div>
     </div>
 
     <script

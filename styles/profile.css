@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.details {
+.details-container {
     background-image: url("../images/background-profile.png");
     background-repeat: no-repeat;
     background-position: initial;
@@ -20,4 +20,39 @@ body {
 
 .profile-icon {
     font-size: 135px !important;
+}
+
+.profile-details {
+    float: right;
+    width: 80%;
+}
+
+.profile-details h3 {
+    display: inline-block;
+    font-family: 'Alegreya Sans SC';
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.profile-details h5 {
+    font-family: 'Alegreya Sans';
+    color: gray;
+    font-size: 24px;
+}
+
+.stats {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.stats span {
+    font-size: 22px !important;
+}
+
+.stats h6 {
+    font-family: 'Alegreya Sans SC';
+    margin: 0 !important;
+    float: right;
+    font-weight: 700;
+    font-size: 20px;
 }
