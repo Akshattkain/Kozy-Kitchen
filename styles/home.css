@@ -2,7 +2,6 @@ body {
   background-image: url("../images/background-home.jpg");
   background-repeat: no-repeat;
   background-position: initial;
-  background-size: cover;
 }
 
 .form {
@@ -10,11 +9,11 @@ body {
   border-radius: 50px;
 }
 
-.form .fa-search {
+.form span {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  color: black;
+  top: 10px;
+  left: 10px;
+  font-size: 35px;
 }
 
 .form-input {
@@ -99,29 +98,33 @@ h2 {
   display: inline-block;
 }
 
-.card-text {
-  margin-left: 2%;
-}
-
-.likes-icon {
-  margin-left: 30%;
-}
-
-.share-icon {
-  font-size: 35px; 
-  margin-left: 3%;
-}
-
-.user-icon {
-  margin-left: 2%;
-}
-
 .view-count {
   float: right; 
   line-height: 1.2em; 
   margin-left: 0;
   font-size: 15px;
   margin-right: 5.5%;
+}
+
+.right {
+  float: right;
+  width: 30%;
+}
+
+.stats span {
+  font-size: 30px !important;
+  float: left;
+  margin-right: 4%;
+}
+
+.stats h6 {
+  font-family: 'Alegreya Sans SC';
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.rating span {
+  font-size: 30px;
 }
 
 .comments-count {
@@ -132,9 +135,7 @@ h2 {
   margin-right: 0.36%;
 }
 
-
 .recipe-card {
-
   background: linear-gradient(to bottom, orange, transparent);
   border-radius: 10px;
   margin: auto;
@@ -147,24 +148,8 @@ h2 {
   font-weight: 700;
 }
 
-.recipe-card .card-text {
-  font-size: 32px;
-}
-
-.user-info {
-  margin-top: 12%;
-}
-
 .user-info p {
   display: inline-block;
   font-size: 20px;
   margin-left: 2%;
-}
-
-.views-icon {
-  margin-left: 1670%;
-}
-
-.comments-icon {
-  margin-left: 80.2%;
 }

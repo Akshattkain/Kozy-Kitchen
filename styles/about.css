@@ -5,22 +5,26 @@ body {
     background-size: cover;
 }
 
+@font-face {
+    font-family: "Edo";
+    src: url("../fonts/edo.ttf");
+}
 #title {
     margin: 20px 150px;
-    font-size: 80px;
+    font-size: 75px;
     font-family: "Edo";
     color: white;
 }
 
 .content {
-    width: 500px;
-    margin: 30px 80px;
+    width: 45vw;
+    margin: 30px 60px;
     text-align: justify;
 }
 
 .content p {
     font-family: "Open Sans";
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 
