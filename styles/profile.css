@@ -93,3 +93,30 @@ body {
     display: grid;
     grid-template-columns: auto auto;
 }   
+
+.recipe-card {
+    background: linear-gradient(180deg, #FFB74B 59.9%, rgba(255, 183, 75, 0) 100%);
+    border-radius: 10px;
+}
+
+.recipe-card .card-title {
+    font-size: 28px;
+    font-family: 'Alegreya Sans SC';
+    font-weight: 700;
+    display: inline-block; 
+  }
+
+.share-icon {
+    font-size: 30px !important;  
+    margin-left: 3%;
+    float: right;
+    line-height: 1.2em;    
+  }
+
+.comments-icon {
+    font-size: 15px ;
+}
+
+.comments-count {
+    font-size: 15px !important;
+}
