@@ -12,13 +12,17 @@
     <div class="card">
       <h4>Register</h4>
 
-      <form>
+      <form action="../server/register.php" method="post">
         <input type="email" name="email" placeholder="Email" />
         <input type="text" name="full_name" placeholder="Full Name" />
         <input type="text" name="username" placeholder="Username" />
         <input type="password" name="password" placeholder="Password" />
-        <input type="password" name="" placeholder="Re-enter Password" />
-        <button type="button" class="btn btn-warning">Register</button>
+        <input
+          type="password"
+          name="re-password"
+          placeholder="Re-enter Password"
+        />
+        <button type="submit" class="btn btn-warning">Register</button>
       </form>
 
       <p>
