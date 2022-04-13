@@ -20,7 +20,7 @@
     <nav id="nav"></nav>
 
     <div class="heading-image">
-      <h1 class="heading">SHARE YOUR RECIPE WITH KOZY-KITCHEN</h1>
+      <h1 class="heading">SHARE YOUR RECIPE WITH<br> <span style="margin: auto; display: table"> KOZY-KITCHEN<span></h1>
       <img
         src="../images/dish.png"
         class="image"
@@ -59,7 +59,6 @@
         ></textarea>
         <br /><br />
         <h3>Category</h3>
-        <br /><br />
         <select
           class="form-select"
           name="category"

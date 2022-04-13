@@ -1,13 +1,19 @@
 <?php
   session_start();
-  if(isset($_SESSION['username']) && isset($_SESSION['name'])) {
-  $username = $_SESSION['username'];
-  $name = $_SESSION['name'];
+  // if(isset($_SESSION['username']) && isset($_SESSION['name'])) {
+  // $username = $_SESSION['username'];
+  // $name = $_SESSION['name'];
   // if($username==""){
   //   echo "<script>alert('Please login to continue!');
   //   document.location='../pages/login.html'</script>";
   // }
-  }
+  // }
+
+  include "../server/db-connect.php";
+  
+  $sql = "SELECT * FROM Recipes";
+  $result = mysqli_query($conn, $sql);
+  
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +21,7 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" href="../styles/home.css" />
+    <script src="../scripts/feed-card.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
 
@@ -39,17 +46,23 @@
 
     <div id="categories"></div>
 
-    <div class="feed"></div>
-    <div class="feed"></div>
+    <div id="feed"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <?php 
+        
+        $arr = array();
+      
+        while($row = mysqli_fetch_assoc($result)) {
+          array_push($arr, $row);
+        }
+      ?>
     <script>
       $("#nav").load("../components/navbar.html");
-      $(".feed").load("../components/feed-card.html");
 
       var categories = [
         { url: "../images/indian.png", name: "Indian" },
@@ -73,6 +86,19 @@
             `
         )
         .join("");
+
+        var recipes = <?php echo json_encode($arr); ?>;
+
+        document.getElementById("feed").innerHTML = recipes
+        .map(
+          (recipe) => 
+          `<feed-card 
+            title="${recipe['title']}"
+            username='${recipe['username']}'
+            complexity='${recipe['difficulty']}'
+            description='Our favorite brownies recipe from scratch.'
+           />`
+        ).join()
     </script>
   </body>
 </html>
