@@ -1,10 +1,12 @@
+<?php
+ include "../components/navbar.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Login</title>
     <link rel="stylesheet" href="../styles/register.css" />
-
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
   <body>
     <nav id="nav"></nav>
@@ -19,7 +21,7 @@
       </form>
 
       <p>
-        New User? <span><a href="./register.html">Register</a></span>
+        New User? <span><a href="./register.php">Register</a></span>
       </p>
     </div>
 
@@ -28,8 +30,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $("#nav").load("../components/navbar.html");
-    </script>
   </body>
 </html>

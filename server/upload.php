@@ -75,7 +75,7 @@ if (isset($_POST['title']) && isset($_POST['servings']) && isset($_POST['ingredi
             echo "<script>alert('Recipe uploaded successfully');
             document.location='../pages/profile.php'</script></script>";
         } else {
-            header("Location: ../pages/upload.html?error=Error in uploading recipe");
+            header("Location: ../pages/upload.php?error=Error in uploading recipe");
             exit();
         }
             } else {

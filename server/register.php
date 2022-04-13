@@ -19,22 +19,22 @@ if (isset($_POST['email']) && isset($_POST['full_name']) && isset($_POST['userna
 	$re_pass = validate($_POST['re-password']);
 
 	if (empty($email)) {
-		header("Location: ../pages/register.html?error=Email is required");
+		header("Location: ../pages/register.php?error=Email is required");
 	    exit();
 	}else if(empty($name)){
-        header("Location: ../pages/register.html?error=Name is required");
+        header("Location: ../pages/register.php?error=Name is required");
 	    exit();
 	}else if(empty($username)){
-        header("Location: ../pages/register.html?error=Username is required");
+        header("Location: ../pages/register.php?error=Username is required");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: ../pages/register.html?error=Password is required");
+        header("Location: ../pages/register.php?error=Password is required");
 	    exit();
 	}else if(empty($re_pass)){
-        header("Location: ../pages/register.html?error=Password is required");
+        header("Location: ../pages/register.php?error=Password is required");
 	    exit();
 	}else if($pass != $re_pass){
-        header("Location: ../pages/register.html?error=Password do not match");
+        header("Location: ../pages/register.php?error=Password do not match");
 	    exit();
 	}else{
 		$sql = "SELECT * FROM Users WHERE username='$username'";
@@ -50,17 +50,17 @@ if (isset($_POST['email']) && isset($_POST['full_name']) && isset($_POST['userna
 		        exit();
             }
             else {
-                header("Location: ../pages/register.html?error=Error in registering user");
+                header("Location: ../pages/register.php?error=Error in registering user");
 		        exit();
             }
         } else {
-            header("Location: ../pages/register.html?error=Username already present");
+            header("Location: ../pages/register.php?error=Username already present");
 	        exit();
         }
 	}
 	
 }else{
-	header("Location: ../pages/register.html");
+	header("Location: ../pages/register.php");
 	exit();
 }
 
