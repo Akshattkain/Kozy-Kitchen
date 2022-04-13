@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  $username = $_SESSION['username'];
+  $name = $_SESSION['name'];
+  if($username==""){
+    header('Location: ../pages/home.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,14 +23,14 @@
         <span class="material-icons-outlined profile-icon"> person </span>
       </div>
       <div class="profile-details">
-        <h3>User Name</h3>
+        <h3><?php echo $username;?></h3>
         <custom-button
           icon="edit"
           iconSize="1em"
           text="Edit Profile"
           textSize="15px"
         />
-        <h5>Full Name</h5>
+        <h5><?php echo $name;?></h5>
         <div class="stats">
           <span class="material-icons"> fastfood </span>
           <h6>15 Recipes</h6>
