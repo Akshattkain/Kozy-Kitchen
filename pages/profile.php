@@ -3,7 +3,8 @@
   $username = $_SESSION['username'];
   $name = $_SESSION['name'];
   if($username==""){
-    header('Location: ../pages/home.php');
+    echo "<script>alert('Please login to continue!');
+    document.location='../pages/login.html'</script>";
 }
 ?>
 
