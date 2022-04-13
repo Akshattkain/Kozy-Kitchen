@@ -1,6 +1,5 @@
 body {
-    background: linear-gradient(180deg, #D6F3FB 58.33%, #FFFFFF 100%);
-    background: no-repeat;
+    background: linear-gradient(to bottom, #D6F3FB 58.33%, #FFFFFF 100%);
 }
 
 .intro {
@@ -40,4 +39,36 @@ p {
     font-family: 'Alegreya Sans';
     font-size: 2vw;
     display: inline-block;
+}
+
+.stats {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 2%;
+}
+
+.stats span {
+    font-size: 22px !important;
+}
+
+.stats h6 {
+    display: inline-block;
+    font-family: 'Alegreya Sans SC';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.stats h6:last-child,
+.stats span:last-child {
+    float: right;
+}
+
+.stats h6:first-child {
+    margin-right: 15px;
+}
+
+.extra-info {
+    float: right;
+    border: 2px solid black;
+    border-radius: 5px;
 }
