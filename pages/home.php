@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  if(isset($_SESSION['username']) && isset($_SESSION['name'])) {
+  $username = $_SESSION['username'];
+  $name = $_SESSION['name'];
+  // if($username==""){
+  //   echo "<script>alert('Please login to continue!');
+  //   document.location='../pages/login.html'</script>";
+  // }
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>

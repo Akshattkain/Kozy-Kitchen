@@ -32,7 +32,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             	$_SESSION['username'] = $row['username'];
             	$_SESSION['name'] = $row['name'];
             	$_SESSION['email'] = $row['email'];
-            	header("Location: ../pages/home.html");
+            	header("Location: ../pages/home.php");
 		        exit();
             }else{
 				header("Location: ../pages/login.html?error=Incorect User name or password");

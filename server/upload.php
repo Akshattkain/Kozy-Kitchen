@@ -3,7 +3,7 @@
 session_start(); 
 include "db-connect.php";
 
-if (isset($_POST['title']) && isset($_POST['servings']) && isset($_POST['ingredients']) && isset($_POST['directions']) && isset($_POST['difficulty']) && isset($_POST['uploadBtn'])) {
+if (isset($_POST['title']) && isset($_POST['servings']) && isset($_POST['ingredients']) && isset($_POST['directions']) && isset($_POST['difficulty']) && isset($_POST['category']) && isset($_POST['uploadBtn'])) {
 
     function validate($data){
         $data = trim($data);
@@ -20,6 +20,7 @@ if (isset($_POST['title']) && isset($_POST['servings']) && isset($_POST['ingredi
     $ingredients = validate($_POST['ingredients']);
 	$directions = validate($_POST['directions']);
 	$difficulty = validate($_POST['difficulty']);
+	$category = validate($_POST['category']);
     $img_dish = $_FILES['img_dish']['name'];
 
     $target_dir = "../uploads/";
@@ -69,7 +70,7 @@ if (isset($_POST['title']) && isset($_POST['servings']) && isset($_POST['ingredi
           } else {
             if (move_uploaded_file($_FILES["img_dish"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["img_dish"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO Recipes (username, title, servings, ingredients, directions, difficulty, img_dish) VALUES ('$username', '$title', '$servings', '$ingredients', '$directions', '$difficulty', '$img_dish');";
+              $sql = "INSERT INTO Recipes (username, title, servings, ingredients, directions, difficulty, category, img_dish) VALUES ('$username', '$title', '$servings', '$ingredients', '$directions', '$difficulty', '$category' '$img_dish');";
         if(mysqli_query($conn, $sql)) {
             echo "<script>alert('Recipe uploaded successfully');
             document.location='../pages/profile.php'</script></script>";

@@ -46,7 +46,7 @@ if (isset($_POST['email']) && isset($_POST['full_name']) && isset($_POST['userna
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['email'] = $row['email'];
-                header("Location: ../pages/home.html");
+                header("Location: ../pages/home.php");
 		        exit();
             }
             else {

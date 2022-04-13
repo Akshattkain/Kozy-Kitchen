@@ -5,7 +5,7 @@
   if($username==""){
     echo "<script>alert('Please login to continue!');
     document.location='../pages/login.html'</script>";
-}
+  }
 ?>
 
 <!DOCTYPE html>
@@ -59,10 +59,12 @@
     <div class="content">
       <h3>My Recipes</h3>
       <custom-button
+        id="add_new_recipe_btn"
         icon="add_circle_outline"
         iconSize="1em"
         text="Add new Recipe"
         textSize="15px"
+        onclick="onAddRecipeClick()"
       />
       <div class="grid-container">
         <div class="grid-item"></div>
@@ -79,6 +81,10 @@
     <script>
       $("#nav").load("../components/navbar.html");
       $(".grid-item").load("../components/profile-card.html")
+
+      function onAddRecipeClick() {
+        document.location = "../pages/upload.php";
+      }
     </script>
   </body>
 </html>
