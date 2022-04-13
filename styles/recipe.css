@@ -9,7 +9,7 @@ body {
 }
 
 .image {
-    display: inline-block;
+    float: right;
 }
 
 .heading {
@@ -26,16 +26,18 @@ body {
 }
 
 img {
-    width: 70% !important;
-    height: 70% !important;
+    width: 30% !important;
+    height: 30% !important;
+    float: right;
 }
 
 p {
     padding: 0;
-    margin-right: 0;
+    margin-right: 0 !important;
     width: 40%;
-    margin-top: 1%;
+    margin-top: 2% !important;
     margin-left: 2%;
     font-family: 'Alegreya Sans';
     font-size: 2vw;
+    display: inline-block;
 }
