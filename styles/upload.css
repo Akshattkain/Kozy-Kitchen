@@ -1,0 +1,14 @@
+body {
+    background: linear-gradient(180deg, #D6F3FB 0%, #FFFFFF 100%);
+    background-repeat: no-repeat;
+}
+
+.heading-image {
+    margin-top: 2.5%;
+}
+
+.heading {
+    font-family: Allan;
+    font-weight: 700;
+    font-size: 55px;
+}

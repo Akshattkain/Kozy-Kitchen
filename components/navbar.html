@@ -50,7 +50,7 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-light bg-black"
+      class="navbar navbar-expand navbar-light bg-black"
       style="background-color: rgba(0, 0, 0, 0.5) !important"
     >
       <div class="container-fluid">
@@ -63,6 +63,7 @@
             class="d-inline-block align-text-top"
           />
         </a>
+
         <a
           class="nav-link active"
           id="nav_element"
@@ -77,6 +78,7 @@
           href="../pages/about.html"
           >About</a
         >
+
         <a
           class="nav-link active"
           id="nav_element"
@@ -84,7 +86,25 @@
           href="../pages/community.html"
           >Community</a
         >
-        <span class="material-icons" style="color: white"> person </span>
+
+        <ul class="nav navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link"
+              data-bs-toggle="dropdown"
+            >
+              <span class="material-icons" style="color: white"> person </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a href="../pages/profile.html" class="dropdown-item">Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Add a recipe</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Logout</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
   </body>
