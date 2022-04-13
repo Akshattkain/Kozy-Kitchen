@@ -6,6 +6,16 @@
     echo "<script>alert('Please login to continue!');
     document.location='../pages/login.html'</script>";
   }
+
+  include "../server/db-connect.php";
+  
+  $sql = "SELECT * FROM Recipes WHERE username='$username'";
+  $result = mysqli_query($conn, $sql);
+  $arr = array();
+  while($row = mysqli_fetch_assoc($result)) {
+    array_push($arr, $row);
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +25,7 @@
     <link rel="stylesheet" href="../styles/profile.css" />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="../scripts/custom-button.js"></script>
+    <script src="../scripts/profile-card.js"></script>
   </head>
   <body>
     <nav id="nav"></nav>
@@ -66,12 +77,7 @@
         textSize="15px"
         onclick="onAddRecipeClick()"
       />
-      <div class="grid-container">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-      </div>
+      <div id="grid-container"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -80,11 +86,22 @@
     ></script>
     <script>
       $("#nav").load("../components/navbar.html");
-      $(".grid-item").load("../components/profile-card.html")
 
       function onAddRecipeClick() {
         document.location = "../pages/upload.php";
       }
+
+      var recipes = <?php echo json_encode($arr); ?>;
+
+      document.getElementById("grid-container").innerHTML = recipes
+        .map(
+          (recipe) => 
+          `<profile-card 
+            title='${recipe['title']}'
+            imgPath='${recipe['img_dish']}'
+           />`
+        ).join()
+
     </script>
   </body>
 </html>
