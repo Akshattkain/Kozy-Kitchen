@@ -4,11 +4,28 @@ body {
 }
 
 .heading-image {
-    margin-top: 2.5%;
+    margin-top: 1%;
 }
 
 .heading {
     font-family: Allan;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 65px;
+    display: inline-block;
+    margin-left: 5% ;
+}
+
+.image {
+    margin-left: 10%;
+    width: 20%;
+    height: 20%;
+}
+
+.btn {
+    background-color: #EF8041 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #E96D26 !important;
 }
