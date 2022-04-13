@@ -58,6 +58,25 @@
           style="width: 50%; margin-left: 5%"
         ></textarea>
         <br /><br />
+        <h3>Category</h3>
+        <br /><br />
+        <select
+          class="form-select"
+          name="category"
+          style="width: 30%; margin-left: 5%"
+        >
+          <option selected>Select a Category</option>
+          <option value="1">Indian</option>
+          <option value="2">Chinese</option>
+          <option value="3">Italian</option>
+          <option value="1">Mexican</option>
+          <option value="2">American</option>
+          <option value="3">Thai</option>
+          <option value="2">Desserts</option>
+          <option value="3">Japanese</option>
+
+        </select>
+        <br /><br />
         <h3>Difficulty</h3>
         <select
           class="form-select"
