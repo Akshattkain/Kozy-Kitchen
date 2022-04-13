@@ -14,8 +14,6 @@
     <title>Upload</title>
     <link rel="stylesheet" href="../styles/upload.css" />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya Sans
-    SC|Alegreya Sans|Allan" rel="stylesheet" />
   </head>
 
   <body>
@@ -24,22 +22,13 @@
     <div class="heading-image">
       <h1 class="heading">SHARE YOUR RECIPE WITH KOZY-KITCHEN</h1>
       <img
-        src="../images/—Pngtree—vegetable salad food vegetables vegetable_3822948 1.jpg"
+        src="../images/dish.png"
         class="image"
       />
     </div>
     <div class="upload-form">
       <form action="../server/upload.php" method="post" enctype='multipart/form-data'>
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Recipe Title
-        </h3>
+        <h3>Recipe Title</h3>
         <input
           type="text"
           name="title"
@@ -47,16 +36,7 @@
           style="width: 30%; margin-left: 5%"
         />
         <br /><br />
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Number of Servings
-        </h3>
+        <h3>Number of Servings</h3>
         <input
           type="number"
           name="servings"
@@ -64,48 +44,21 @@
           style="width: 30%; margin-left: 5%"
         />
         <br /><br />
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Ingredients
-        </h3>
+        <h3>Ingredients</h3>
         <textarea
           class="form-control"
           name="ingredients"
           style="width: 30%; margin-left: 5%"
         ></textarea>
         <br /><br />
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Directions
-        </h3>
+        <h3>Directions</h3>
         <textarea
           class="form-control"
           name="directions"
           style="width: 50%; margin-left: 5%"
         ></textarea>
         <br /><br />
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Difficulty
-        </h3>
+        <h3>Difficulty</h3>
         <select
           class="form-select"
           name="difficulty"
@@ -117,16 +70,7 @@
           <option value="3">Hard</option>
         </select>
         <br /><br />
-        <h3
-          style="
-            font-family: 'Alegreya Sans SC';
-            font-weight: 700;
-            font-size: 50px;
-            margin-left: 5%;
-          "
-        >
-          Upload a photo
-        </h3>
+        <h3>Upload a photo</h3>
         <input
           type="file"
           name="img_dish"
