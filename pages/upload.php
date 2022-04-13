@@ -16,11 +16,9 @@ include "../components/navbar.php";
 <head>
     <title>Upload</title>
     <link rel="stylesheet" href="../styles/upload.css" />
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 
 <body>
-    <nav id="nav"></nav>
     <div class="heading-image">
         <h1 class="heading">SHARE YOUR RECIPE WITH<br /><span style="margin: auto; display: table" >KOZY-KITCHEN</span></h1>
         <img src="../images/dish.png" class="image" />
@@ -83,9 +81,6 @@ include "../components/navbar.php";
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script>
-        $("#nav").load("../components/navbar.html");
-    </script>
 </body>
 
 </html>

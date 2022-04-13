@@ -1,6 +1,5 @@
 body {
-    background: linear-gradient(180deg, #D6F3FB 0%, #FFFFFF 100%);
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #D6F3FB 58.33%, #FFFFFF 100%);
 }
 
 .heading-image {
@@ -12,7 +11,7 @@ body {
     font-weight: 700;
     font-size: 4vw;
     display: inline-block;
-    margin-left: 5% ;
+    margin-left: 5%;
 }
 
 .image {
@@ -32,8 +31,8 @@ body {
 }
 
 h3 {
-    font-family: 'Alegreya Sans SC'; 
-    font-weight: 700 !important; 
-    font-size: 3vw !important; 
+    font-family: 'Alegreya Sans SC';
+    font-weight: 700 !important;
+    font-size: 3vw !important;
     margin-left: 5%;
 }
