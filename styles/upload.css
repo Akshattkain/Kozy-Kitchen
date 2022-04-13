@@ -10,13 +10,14 @@ body {
 .heading {
     font-family: Allan;
     font-weight: 700;
-    font-size: 65px;
+    font-size: 4vw;
     display: inline-block;
     margin-left: 5% ;
 }
 
 .image {
     margin-left: 10%;
+    margin-right: 4%;
     width: 20%;
     height: 20%;
 }
@@ -28,4 +29,11 @@ body {
 
 .btn:hover {
     background-color: #E96D26 !important;
+}
+
+h3 {
+    font-family: 'Alegreya Sans SC'; 
+    font-weight: 700 !important; 
+    font-size: 3vw !important; 
+    margin-left: 5%;
 }
