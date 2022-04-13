@@ -13,6 +13,10 @@
   
   $sql = "SELECT * FROM Recipes";
   $result = mysqli_query($conn, $sql);
+  $arr = array();
+  while($row = mysqli_fetch_assoc($result)) {
+    array_push($arr, $row);
+  }
   
 ?>
 
@@ -53,14 +57,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <?php 
-        
-        $arr = array();
-      
-        while($row = mysqli_fetch_assoc($result)) {
-          array_push($arr, $row);
-        }
-      ?>
     <script>
       $("#nav").load("../components/navbar.html");
 
@@ -93,10 +89,11 @@
         .map(
           (recipe) => 
           `<feed-card 
-            title="${recipe['title']}"
+            title='${recipe['title']}'
             username='${recipe['username']}'
             complexity='${recipe['difficulty']}'
             description='Our favorite brownies recipe from scratch.'
+            imgPath='${recipe['img_dish']}'
            />`
         ).join()
     </script>

@@ -4,6 +4,7 @@ class FeedCard extends HTMLElement {
     var description = this.attributes.description.value;
     var complexity = this.attributes.complexity.value;
     var username = this.attributes.username.value;
+    var imgPath = this.attributes.imgPath.value;
 
     this.innerHTML = `
         <!DOCTYPE html>
@@ -12,7 +13,7 @@ class FeedCard extends HTMLElement {
             <div class="card mb-3 recipe-card" style="max-width: 1040px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="../images/image 15.jpg" class="img-fluid rounded-start" alt="..." />
+                  <img src="../uploads/${imgPath}" class="img-fluid rounded-start" alt="..."  height=250px />
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
