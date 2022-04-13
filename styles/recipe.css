@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(180deg, #D6F3FB 58.33%, #FFFFFF 100%);
+    background: no-repeat;
+}
+
+.intro {
+    margin-top: 2%;
+    display: inline-block;
+}
+
+.image {
+    display: inline-block;
+}
+
+.heading {
+    font-family: 'Alegreya Sans Sc';
+    font-weight: 700;
+    margin-left: 2%;
+    font-size: 4vw;
+}
+
+.rating span {
+    font-size: 20px;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+img {
+    width: 70% !important;
+    height: 70% !important;
+}
+
+p {
+    padding: 0;
+    margin-right: 0;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-family: 'Alegreya Sans';
+    font-size: 2vw;
+}

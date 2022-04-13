@@ -45,22 +45,22 @@
                 <br /><br />
                 <select class="form-select" name="category" style="width: 30%; margin-left: 5%">
                   <option selected>Select a Category</option>
-                  <option value="1">Indian</option>
-                  <option value="2">Chinese</option>
-                  <option value="3">Italian</option>
-                  <option value="1">Mexican</option>
-                  <option value="2">American</option>
-                  <option value="3">Thai</option>
-                  <option value="2">Desserts</option>
-                  <option value="3">Japanese</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Mexican">Mexican</option>
+                  <option value="American">American</option>
+                  <option value="Thai">Thai</option>
+                  <option value="Desserts">Desserts</option>
+                  <option value="Japanese">Japanese</option>
                 </select>
                 <br /><br />
                 <h3>Difficulty</h3>
                 <select class="form-select" name="difficulty" style="width: 30%; margin-left: 5%">
           <option selected>Select a Difficulty</option>
-          <option value="1">Easy</option>
-          <option value="2">Medium</option>
-          <option value="3">Hard</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
         </select>
                 <br /><br />
                 <h3>Upload a photo</h3>
