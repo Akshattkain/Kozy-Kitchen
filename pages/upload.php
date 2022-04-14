@@ -41,9 +41,8 @@ include "../components/navbar.php";
             <textarea class="form-control" name="directions" style="width: 50%; margin-left: 5%"></textarea>
             <br /><br />
             <h3>Category</h3>
-            <br /><br />
             <select class="form-select" name="category" style="width: 30%; margin-left: 5%">
-                <option selected>Select a Category</option>
+                <option selected disabled>Select a Category</option>
                 <option value="Indian">Indian</option>
                 <option value="Chinese">Chinese</option>
                 <option value="Italian">Italian</option>
@@ -54,9 +53,9 @@ include "../components/navbar.php";
                 <option value="Japanese">Japanese</option>
             </select>
             <br /><br />
-            <h3>Difficulty</h3>
-            <select class="form-select" name="difficulty" style="width: 30%; margin-left: 5%">
-                <option selected>Select a Difficulty</option>
+            <h3>Complexity</h3>
+            <select class="form-select" name="complexity" style="width: 30%; margin-left: 5%">
+                <option selected disabled>Select a Complexity</option>
                 <option value="Easy">Easy</option>
                 <option value="Medium">Medium</option>
                 <option value="Hard">Hard</option>

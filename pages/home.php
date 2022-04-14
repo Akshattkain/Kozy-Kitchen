@@ -89,8 +89,8 @@
           `<feed-card 
             title='${recipe['title']}'
             username='${recipe['username']}'
-            complexity='${recipe['difficulty']}'
-            description='Our favorite brownies recipe from scratch.'
+            complexity='${recipe['complexity']}'
+            description='${recipe['description']}'
             imgPath='${recipe['img_dish']}'
            />`
         ).join()
