@@ -3,7 +3,7 @@ session_start();
 
 include "../server/db-connect.php";
 include "../components/navbar.php";
-$id = $_SERVER["QUERY_STRING"];
+$id = $_GET['id'];
 $sql = "SELECT * FROM Recipes Where id='$id'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -32,7 +32,7 @@ $row = mysqli_fetch_assoc($result);
                 <p style="font-weight: 700;">3 Likes| 3 Comments | 3 Views</p>
             </div>
             <p><?php echo $row['description'] ?></p>
-            <img src="../images/image 15.jpg">
+            <img src=<?php echo "../uploads/".$row['img_dish'] ?>>
         </div>
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2% !important;">Ingredients</h1>
         <p class="ingredients"><?php echo $row['ingredients'] ?></p>

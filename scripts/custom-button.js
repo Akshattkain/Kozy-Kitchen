@@ -4,7 +4,6 @@ class CustomButton extends HTMLElement {
 
     var iconSize = this.attributes.iconSize.value;
     var textSize = this.attributes.textSize.value;
-    var onclick = this.attributes.onclick;
 
     style.innerHTML = `
     .btn {
@@ -31,7 +30,7 @@ class CustomButton extends HTMLElement {
     var text = this.attributes.text.value;
 
     this.innerHTML = `
-    <button class="btn btn-outline-dark" onclick="${onclick}">
+    <button class="btn btn-outline-dark">
         <span class="material-icons"> ${icon} </span>
         <p> ${text} </p>
     </button>

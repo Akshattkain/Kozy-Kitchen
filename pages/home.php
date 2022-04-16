@@ -45,6 +45,11 @@
       </div>
     </div>
 
+    <!-- <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+  <option value="AL">Alabama</option>
+  <option value="WY">Wyoming</option>
+</select> -->
+
     <h2>Popular Categories</h2>
 
     <div id="categories"></div>
@@ -57,6 +62,10 @@
       crossorigin="anonymous"
     ></script>
     <script>
+
+// $(document).ready(function() {
+//     $('.js-example-basic-multiple').select2();
+// });
 
       var categories = [
         { url: "../images/indian.png", name: "Indian" },
@@ -82,18 +91,25 @@
         .join("");
 
         var recipes = <?php echo json_encode($arr); ?>;
+        console.log(recipes);
 
         document.getElementById("feed").innerHTML = recipes
         .map(
           (recipe) => 
           `<feed-card 
+            id='${recipe['id']}'
             title='${recipe['title']}'
             username='${recipe['username']}'
             complexity='${recipe['complexity']}'
             description='${recipe['description']}'
             imgPath='${recipe['img_dish']}'
-           />`
-        ).join()
+            onclick='viewRecipe(this.id)'
+           ></feed-card>`
+        ).join("")
+
+        function viewRecipe(id) {
+          document.location = `../pages/recipe.php?id=${id}`;
+        }
     </script>
   </body>
 </html>

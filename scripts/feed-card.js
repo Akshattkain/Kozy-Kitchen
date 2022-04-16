@@ -5,12 +5,15 @@ class FeedCard extends HTMLElement {
     var complexity = this.attributes.complexity.value;
     var username = this.attributes.username.value;
     var imgPath = this.attributes.imgPath.value;
+    var complexityColor =
+      complexity == "Easy"
+        ? "green"
+        : complexity == "Medium"
+        ? "yellow"
+        : "red";
 
     this.innerHTML = `
-        <!DOCTYPE html>
-        <html>
-          <body>
-            <div class="card mb-3 recipe-card" style="max-width: 1040px;">
+            <div class="card mb-3 recipe-card" ">
               <div class="row g-0">
                 <div class="col-md-4" >
                   <img src="../uploads/${imgPath}" class="img-fluid rounded-start" alt="..."/>
@@ -21,8 +24,8 @@ class FeedCard extends HTMLElement {
                     <span class="material-icons" style="font-size: 35px; float: right;"> share </span>
                     <span class="material-icons" style="font-size: 35px; float: right; margin-right: 10px"> favorite </span>
                     <p style="margin-left: 2%; font-size: 32px;">${description}</p>
-                    <div class="complexity-btn">
-                      <p class="complexity-level" >Complexity: ${complexity}</p>
+                    <div class="complexity-btn" style="background-color: ${complexityColor}">
+                      <p class="complexity-level" >${complexity}</p>
                     </div>
                     <div class="user-info" style=" margin-top: 12%;">
                       <div style="float: left;">
@@ -51,9 +54,7 @@ class FeedCard extends HTMLElement {
                   </div>
                 </div>
               </div>
-            </div>
-          </body>
-        </html>        
+            </div>      
         `;
   }
 }

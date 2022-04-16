@@ -78,7 +78,9 @@
         text="Add new Recipe"
         textSize="15px"
         onclick="onAddRecipeClick()"
-      />
+        style="float: right;"
+      ></custom-button>
+
       <div id="grid-container"></div>
 
     <script
@@ -97,11 +99,21 @@
       document.getElementById("grid-container").innerHTML = recipes
         .map(
           (recipe) => 
-          `<profile-card 
+          `<div style=" margin-top: 60px;">
+          <profile-card
+            id='${recipe['id']}'
             title='${recipe['title']}'
             imgPath='${recipe['img_dish']}'
-           />`
-        ).join()
+            onclick='viewRecipe(this.id)'
+            style="display: inline-block;"
+           ></profile-card>
+           </div>
+           `
+        ).join("");
+
+        function viewRecipe(id) {
+          document.location = `../pages/recipe.php?id=${id}`;
+        }
 
     </script>
   </body>

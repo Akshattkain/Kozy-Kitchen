@@ -83,7 +83,6 @@ body {
 }
 
 .content h3 {
-    width: 80%;
     display: inline-block;
     font-family: 'Alegreya Sans SC';
     font-weight: 700;
@@ -93,7 +92,3 @@ body {
     display: grid;
     grid-template-columns: auto auto;
 }   
-
-.grid-item {
-    margin-top: 60px;
-}

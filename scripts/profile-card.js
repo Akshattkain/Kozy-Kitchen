@@ -16,6 +16,12 @@ class ProfileCard extends HTMLElement {
                 );
                 padding: 10px;
                 border-radius: 10px;
+                display: inline-block;
+              }
+
+              .recipe-card:hover {
+                cursor: pointer;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
               }
         
               .recipe-card .card-title {
@@ -42,7 +48,7 @@ class ProfileCard extends HTMLElement {
             </style>
           </head>
           <body>
-            <div class="card recipe-card" style="width: 18rem; margin-top: 60px;">
+            <div class="card recipe-card" style="width: 250px;">
               <img src="../uploads/${imgPath}" class="card-img-top" alt="..." height=250px />
               <div class="card-body">
                 <h5 class="card-title">${title}</h5>

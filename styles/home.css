@@ -68,6 +68,16 @@ h2 {
   font-family: 'Alegreya Sans SC';
 }
 
+feed-card {
+  display: inline-block;
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+.recipe-card {
+  margin-bottom: 10vh !important;
+}
+
 .category-container {
   display: inline-block;
   margin: auto;
@@ -77,12 +87,16 @@ h2 {
   margin: 50px;
 } 
 
+.recipe-card:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .complexity-btn{
   position: absolute;
   width: 21%;
   height: 10%;
   margin-left: 1.5%;
-  background-color: yellow;
   border-radius: 10px;
   text-align: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.264);
@@ -91,6 +105,7 @@ h2 {
 .complexity-level {
   font-size: 22px;
   font-weight: 400;
+  color: white;
 }
 
 .card-title {

@@ -24,7 +24,7 @@ body {
     margin-left: 2%;
 }
 
-img {
+.intro img {
     width: 30% !important;
     height: 30% !important;
     float: right;
