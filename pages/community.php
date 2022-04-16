@@ -1,3 +1,8 @@
+<?php
+  session_start();
+ include "../components/navbar.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,11 +16,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="../scripts/custom-button.js"></script>
   </head>
   <body>
-    <nav id="nav"></nav>
 
     <fieldset class="reset-this fieldset">
       <legend class="reset-this legend">Top 5 Recipes</legend>
@@ -89,8 +92,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $("#nav").load("../components/navbar.html");
-    </script>
   </body>
 </html>

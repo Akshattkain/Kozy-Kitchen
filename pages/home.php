@@ -10,6 +10,7 @@
   // }
 
   include "../server/db-connect.php";
+  include "../components/navbar.php";
   
   $sql = "SELECT * FROM Recipes";
   $result = mysqli_query($conn, $sql);
@@ -26,11 +27,9 @@
     <title>Home</title>
     <link rel="stylesheet" href="../styles/home.css" />
     <script src="../scripts/feed-card.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
 
   <body>
-    <nav id="nav"></nav>
     <div
       class="row d-flex justify-content-center align-items-center search-box"
     >
@@ -58,7 +57,6 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#nav").load("../components/navbar.html");
 
       var categories = [
         { url: "../images/indian.png", name: "Indian" },
@@ -91,8 +89,8 @@
           `<feed-card 
             title='${recipe['title']}'
             username='${recipe['username']}'
-            complexity='${recipe['difficulty']}'
-            description='Our favorite brownies recipe from scratch.'
+            complexity='${recipe['complexity']}'
+            description='${recipe['description']}'
             imgPath='${recipe['img_dish']}'
            />`
         ).join()

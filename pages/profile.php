@@ -1,10 +1,11 @@
 <?php
   session_start();
-  $username = $_SESSION['username'];
-  $name = $_SESSION['name'];
-  if($username==""){
+  if(isset($_SESSION['username']) && isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+    $name = $_SESSION['name']; 
+  } else {
     echo "<script>alert('Please login to continue!');
-    document.location='../pages/login.html'</script>";
+    document.location='../pages/login.php'</script>";
   }
 
   include "../server/db-connect.php";
@@ -16,6 +17,8 @@
     array_push($arr, $row);
   }
 
+  include "../components/navbar.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,6 @@
   <head>
     <title>Profile</title>
     <link rel="stylesheet" href="../styles/profile.css" />
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="../scripts/custom-button.js"></script>
     <script src="../scripts/profile-card.js"></script>
   </head>
@@ -85,7 +87,6 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#nav").load("../components/navbar.html");
 
       function onAddRecipeClick() {
         document.location = "../pages/upload.php";

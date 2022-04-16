@@ -1,9 +1,13 @@
+<?php
+  session_start();
+ include "../components/navbar.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>About</title>
     <link rel="stylesheet" href="../styles/about.css" />
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
 
   <body>
@@ -36,8 +40,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $("#nav").load("../components/navbar.html");
-    </script>
   </body>
 </html>
