@@ -24,12 +24,6 @@ body {
     margin-left: 2%;
 }
 
-img {
-    width: 30% !important;
-    height: 30% !important;
-    float: right;
-}
-
 p {
     padding: 0;
     margin-right: 0 !important;
@@ -71,4 +65,12 @@ p {
     float: right;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.intro img {
+    width: 30% !important;
+    height: 30% !important;
+    float: right;
+    width: 45vw;
+    height: 50%;
 }
