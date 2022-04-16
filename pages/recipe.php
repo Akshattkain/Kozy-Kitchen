@@ -20,20 +20,21 @@ $row = mysqli_fetch_assoc($result);
 
 <body>
     <div class="container">
+        <img src=<?php echo "../uploads/".$row['img_dish'] ?>>
         <div class="intro">
             <h1 class="heading"><?php echo $row['title'] ?></h1>
             <p style="font-size: 1.5vw; color: rgb(117, 117, 117); margin-top: 0 !important; margin-left: 2% !important;">Category: <?php echo $row['category'] ?></p>
+            <p style="font-weight: 700;">3 Likes| 3 Comments | 3 Views</p>
             <div class="rating">
                 <span class="material-icons" style="margin-left: 2% !important;"> star </span>
                 <span class="material-icons" style="margin-left: 1% !important;"> star </span>
                 <span class="material-icons" style="margin-left: 1% !important;"> star </span>
                 <span class="material-icons" style="margin-left: 1% !important;"> star </span>
                 <span class="material-icons" style="margin-left: 1% !important;"> star </span>
-                <p style="font-weight: 700;">3 Likes| 3 Comments | 3 Views</p>
+                
             </div>
             <p><?php echo $row['description'] ?></p>
-            <img src=<?php echo "../uploads/".$row['img_dish'] ?>>
-        </div>
+        </div>        
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2% !important;">Ingredients</h1>
         <p class="ingredients"><?php echo $row['ingredients'] ?></p>
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2% !important;">Cook Time</h1>
