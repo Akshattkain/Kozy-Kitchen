@@ -12,8 +12,8 @@ class FeedCard extends HTMLElement {
           <body>
             <div class="card mb-3 recipe-card" style="max-width: 1040px;">
               <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="../uploads/${imgPath}" class="img-fluid rounded-start" alt="..."  height=250px />
+                <div class="col-md-4" >
+                  <img src="../uploads/${imgPath}" class="img-fluid rounded-start" alt="..."/>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -41,11 +41,11 @@ class FeedCard extends HTMLElement {
                       <div class="right">
                         <div class="stats">
                           <span class="material-icons"> visibility </span>
-                          <h6>15 Recipes</h6>
+                          <h6>15 Views</h6>
                         </div>
                         <div class="stats">
                           <span class="material-icons"> chat </span>
-                          <h6>30K Followers</h6>
+                          <h6>30 Comments</h6>
                         </div>
                       </div>
                   </div>

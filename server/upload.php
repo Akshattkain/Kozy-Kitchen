@@ -82,7 +82,7 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
           } else {
             if (move_uploaded_file($_FILES["img_dish"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["img_dish"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO Recipes (username, title, description, servings, ingredients, directions, category, complexity, img_dish) VALUES ('$username', '$title', '$description', '$servings', '$ingredients', '$directions', '$category', '$complexity', '$img_dish');";
+              $sql = "INSERT INTO Recipes (username, title, description, servings, ingredients, directions, category, complexity, hours, minutes, img_dish) VALUES ('$username', '$title', '$description', '$servings', '$ingredients', '$directions', '$category', '$complexity', '$hours', '$minutes', '$img_dish');";
         if(mysqli_query($conn, $sql)) {
             echo "<script>alert('Recipe uploaded successfully');
             document.location='../pages/profile.php'</script></script>";

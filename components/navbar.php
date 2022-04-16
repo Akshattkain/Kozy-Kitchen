@@ -62,7 +62,7 @@
 
     </style>
     <link
-      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC|Alegreya Sans"
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC|Alegreya Sans|Allan"
       rel="stylesheet"
     />
     <link
@@ -76,7 +76,7 @@
       style="background-color: rgba(0, 0, 0, 0.5) !important"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../pages/explore.html">
+        <a class="navbar-brand" href="../pages/explore.php">
           <img
             src="../images/logo.png"
             alt="Logo"
@@ -97,7 +97,7 @@
           class="nav-link active"
           id="nav_element"
           aria-current="page"
-          href="../pages/about.html"
+          href="../pages/about.php"
           >About</a
         >
 
@@ -105,7 +105,7 @@
           class="nav-link active"
           id="nav_element"
           aria-current="page"
-          href="../pages/community.html"
+          href="../pages/community.php"
           >Community</a
         >
 

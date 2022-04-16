@@ -1,3 +1,7 @@
+<?php
+  session_start();
+ include "../components/navbar.php";
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,7 +18,7 @@
         <img src="../images/bg.png" width="500px" />
         <p>Kozy Kitchen</p>
       </div>
-      <button onclick="window.location.href = 'home.html';" type="button" class="btn btn-light">
+      <button onclick="window.location.href = 'home.php';" type="button" class="btn btn-light">
         Let's Explore <i class="fa fa-arrow-right"></i>
       </button>
     </div>

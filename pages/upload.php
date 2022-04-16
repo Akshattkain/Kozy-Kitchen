@@ -20,7 +20,7 @@ include "../components/navbar.php";
 
 <body>
     <div class="heading-image">
-        <h1 class="heading">SHARE YOUR RECIPE WITH<br /><span style="margin: auto; display: table" >KOZY-KITCHEN</span></h1>
+        <h1 class="heading">SHARE YOUR RECIPE WITH KOZY-KITCHEN</h1>
         <img src="../images/dish.png" class="image" />
     </div>
     <div class="upload-form">
