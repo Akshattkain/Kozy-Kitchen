@@ -1,18 +1,18 @@
 class FeedCard extends HTMLElement {
-  connectedCallback() {
-    var title = this.attributes.title.value;
-    var description = this.attributes.description.value;
-    var complexity = this.attributes.complexity.value;
-    var username = this.attributes.username.value;
-    var imgPath = this.attributes.imgPath.value;
-    var complexityColor =
-      complexity == "Easy"
-        ? "green"
-        : complexity == "Medium"
-        ? "yellow"
-        : "red";
+    connectedCallback() {
+        var title = this.attributes.title.value;
+        var description = this.attributes.description.value;
+        var complexity = this.attributes.complexity.value;
+        var username = this.attributes.username.value;
+        var imgPath = this.attributes.imgPath.value;
+        var complexityColor =
+            complexity == "Easy" ?
+            "green" :
+            complexity == "Medium" ?
+            "#ece400" :
+            "red";
 
-    this.innerHTML = `
+        this.innerHTML = `
             <div class="card mb-3 recipe-card" ">
               <div class="row g-0">
                 <div class="col-md-4" >
@@ -56,7 +56,7 @@ class FeedCard extends HTMLElement {
               </div>
             </div>      
         `;
-  }
+    }
 }
 
 customElements.define("feed-card", FeedCard);

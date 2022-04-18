@@ -2,6 +2,8 @@
 
 session_start(); 
 include "db-connect.php";
+echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>";
+echo "<script src='../scripts/sweetalert.min.js'></script>";
 
 if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['servings']) && isset($_POST['ingredients']) && isset($_POST['directions']) && isset($_POST['category']) && isset($_POST['complexity']) && isset($_POST['hours']) && isset($_POST['minutes']) && isset($_POST['uploadBtn'])) {
 
@@ -11,8 +13,6 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
         $data = htmlspecialchars($data);
         return $data;
     }
-
-    echo "<PRE>" . print_r ($_FILES, true) . "</PRE>";
 
     $username = $_SESSION['username'];
     $title = validate($_POST['title']);
@@ -29,33 +29,8 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
     $target_dir = "../uploads/";
     $target_file = $target_dir . basename($_FILES["img_dish"]["name"]);
     $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    if (empty($title)) {
-		header("Location: ../pages/upload.php?error=Title is required");
-	    exit();
-	}else if(empty($description)){
-        header("Location: ../pages/upload.php?error=Description is required");
-	    exit();
-	}else if(empty($servings)){
-        header("Location: ../pages/upload.php?error=Number of servings is required");
-	    exit();
-	}else if(empty($ingredients)){
-        header("Location: ../pages/upload.php?error=Ingredients is required");
-	    exit();
-	}else if(empty($directions)){
-        header("Location: ../pages/upload.php?error=Directions is required");
-	    exit();
-	}else if(empty($category)){
-        header("Location: ../pages/upload.php?error=Category is required");
-	    exit();
-	}else if(empty($complexity)){
-        header("Location: ../pages/upload.php?error=Complexity is required");
-	    exit();
-	}else if(empty($hours) && empty($minutes)){
-        header("Location: ../pages/upload.php?error=Cook time is required");
-	    exit();
-	} else {
         if(isset($_POST["submit"])) {
             $check = getimagesize($_FILES["img_dish"]["tmp_name"]);
             if($check !== false) {
@@ -84,22 +59,50 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
               echo "The file ". htmlspecialchars( basename( $_FILES["img_dish"]["name"])). " has been uploaded.";
               $sql = "INSERT INTO Recipes (username, title, description, servings, ingredients, directions, category, complexity, hours, minutes, img_dish) VALUES ('$username', '$title', '$description', '$servings', '$ingredients', '$directions', '$category', '$complexity', '$hours', '$minutes', '$img_dish');";
         if(mysqli_query($conn, $sql)) {
-            echo "<script>alert('Recipe uploaded successfully');
-            document.location='../pages/profile.php'</script></script>";
+            echo "<script>
+            swal({
+                title: 'Thanks!',
+                text: 'Submitted successfully',
+                icon: 'success',
+            }).then(val => {
+                if(val) {
+                    document.location='../pages/profile.php';
+                }
+            });
+            </script>";
         } else {
-            header("Location: ../pages/upload.php?error=Error in uploading recipe");
-            exit();
+            echo "<script>
+            swal({
+                title: 'Thanks!',
+                text: 'Error in uploading recipe',
+                icon: 'error',
+            }).then(val => {
+                if(val) {
+                    document.location='../pages/upload.php';
+                }
+            });
+            </script>";
         }
             } else {
               echo "Sorry, there was an error uploading your file.";
             }
         }
-    }
 
 
 }else{
-	header("Location: ../pages/upload.php?error=isset");
-	exit();
+    echo "<script>
+    $(document).ready(function() {
+        swal({
+            title: 'Thanks!',
+            text: 'All fields are required!',
+            icon: 'error',
+        }).then(val => {
+            if(val) {
+                document.location='../pages/upload.php';
+            }
+        });
+    });
+    </script>";
 }
 
 ?>
