@@ -31,57 +31,64 @@ include "../components/navbar.php";
                 <h3>Recipe Title</h3>
                 <input type="text" name="title" class="form-control" style="width: 30%; margin-left: 5%" />
                 <br /><br />
+
                 <h3>Description</h3>
                 <textarea class="form-control" name="description" style="width: 50%; margin-left: 5%"></textarea>
                 <br /><br />
+
                 <h3>Number of Servings</h3>
                 <input type="number" name="servings" class="form-control" style="width: 30%; margin-left: 5%" />
                 <br /><br />
+
                 <h3>Ingredients</h3>
                 <textarea class="form-control" name="ingredients" style="width: 30%; margin-left: 5%"></textarea>
                 <br /><br />
+
                 <h3>Directions</h3>
                 <textarea class="form-control" name="directions" style="width: 50%; margin-left: 5%"></textarea>
                 <br /><br />
+
                 <h3>Category</h3>
                 <select class="form-select" name="category" style="width: 30%; margin-left: 5%">
-                <option selected disabled>Select a Category</option>
-                <option value="Indian">Indian</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Italian">Italian</option>
-                <option value="Mexican">Mexican</option>
-                <option value="American">American</option>
-                <option value="Thai">Thai</option>
-                <option value="Desserts">Desserts</option>
-                <option value="Japanese">Japanese</option>
-            </select>
+                    <option selected disabled>Select a Category</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="American">American</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Japanese">Japanese</option>
+                </select>
                 <br /><br />
+
                 <h3>Complexity</h3>
                 <select class="form-select" name="complexity" style="width: 30%; margin-left: 5%">
-                <option selected disabled>Select a Complexity</option>
-                <option value="Easy">Easy</option>
-                <option value="Medium">Medium</option>
-                <option value="Hard">Hard</option>
-            </select>
+                    <option selected disabled>Select a Complexity</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
                 <br /><br />
+
                 <h3>Cook Time</h3>
                 <input type="number" name="hours" placeholder="Hours" class="form-control" style="width: 30%; margin-left: 5%" />
                 <br>
                 <input type="number" name="minutes" placeholder="Minutes" class="form-control" style="width: 30%; margin-left: 5%" />
                 <br /><br />
+
                 <h3>Upload a photo</h3>
                 <input type="file" name="img_dish" class="form-control" style="width: 30%; margin-left: 5%" />
                 <p style="color: rgb(133, 133, 133); font-size: 15px; margin-left: 5.5%">
-                    max upload size: 5MB
+                    Max upload size: 5MB
                 </p>
                 <br /><br />
+
                 <button id="upload_btn" type="submit" name="uploadBtn" class="btn btn-warning" style="font-size: 30px; margin-left: 45% !important">
-                Submit
-            </button>
+                    Submit
+                </button>
                 <br /><br />
             </form>
         </div>
-
     </body>
-
 </html>
