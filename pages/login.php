@@ -1,4 +1,5 @@
 <?php
+  session_start();
  include "../components/navbar.php";
 ?>
 
@@ -17,7 +18,7 @@
       <form action="../server/login.php" method="post">
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Password" />
-        <button type="submit" class="btn btn-warning">Login</button>
+        <button type="submit" name="submit" class="btn btn-warning">Login</button>
       </form>
 
       <p>

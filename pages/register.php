@@ -25,7 +25,7 @@
           name="re-password"
           placeholder="Re-enter Password"
         />
-        <button type="submit" class="btn btn-warning">Register</button>
+        <button type="submit" name="submit" class="btn btn-warning">Register</button>
       </form>
 
       <p>

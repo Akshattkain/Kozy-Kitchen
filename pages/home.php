@@ -1,13 +1,5 @@
 <?php
   session_start();
-  // if(isset($_SESSION['username']) && isset($_SESSION['name'])) {
-  // $username = $_SESSION['username'];
-  // $name = $_SESSION['name'];
-  // if($username==""){
-  //   echo "<script>alert('Please login to continue!');
-  //   document.location='../pages/login.html'</script>";
-  // }
-  // }
 
   include "../server/db-connect.php";
   include "../components/navbar.php";
@@ -19,6 +11,10 @@
     array_push($arr, $row);
   }
   
+  function mapTitle($row) {
+    echo "<a href='recipe.php?id=".$row['id']."'>".$row['title']."</a>";
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +23,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../styles/home.css" />
     <script src="../scripts/feed-card.js"></script>
-  </head>
+</head>
 
   <body>
     <div
@@ -36,19 +32,23 @@
       <div class="col-md-6">
         <div class="form">
           <span class="material-icons"> search </span>
-          <input
-            type="text"
-            class="form-control form-input"
-            placeholder="Search for recepies"
-          />
+          <div id="search-dropdown">
+            <input
+              type="text"
+              class="form-control form-input"
+              placeholder="Search for recepies"
+              onkeyup="filterRecipes()"
+              onclick="showDropdown()"
+              id="search-box"
+            >
+            <div id="options-list" style="display: none">
+            <?php array_map("mapTitle", $arr) ?>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-  <option value="AL">Alabama</option>
-  <option value="WY">Wyoming</option>
-</select> -->
 
     <h2>Popular Categories</h2>
 
@@ -63,9 +63,35 @@
     ></script>
     <script>
 
-// $(document).ready(function() {
-//     $('.js-example-basic-multiple').select2();
-// });
+    function filterRecipes() {
+      var input, div, filter, ul, li, a, i;
+      input = document.getElementById("search-box");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("search-dropdown");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+
+    function showDropdown() {
+      var div,
+      div = document.getElementById("options-list");
+      div.style.display = "";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.form-input')) {
+        var div,
+        div = document.getElementById("options-list");
+        div.style.display = "none";
+      }
+    }
 
       var categories = [
         { url: "../images/indian.png", name: "Indian" },
@@ -91,7 +117,6 @@
         .join("");
 
         var recipes = <?php echo json_encode($arr); ?>;
-        console.log(recipes);
 
         document.getElementById("feed").innerHTML = recipes
         .map(

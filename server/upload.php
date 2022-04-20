@@ -73,7 +73,7 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
         } else {
             echo "<script>
             swal({
-                title: 'Thanks!',
+                title: 'Error!',
                 text: 'Error in uploading recipe',
                 icon: 'error',
             }).then(val => {
@@ -93,7 +93,7 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['serv
     echo "<script>
     $(document).ready(function() {
         swal({
-            title: 'Thanks!',
+            title: 'Error!',
             text: 'All fields are required!',
             icon: 'error',
         }).then(val => {
