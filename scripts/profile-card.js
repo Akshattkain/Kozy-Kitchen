@@ -10,15 +10,11 @@ class ProfileCard extends HTMLElement {
           <head>
             <style>
               .recipe-card {
-                background: linear-gradient(
-                  180deg,
-                  #ffb74b 59.9%,
-                  rgba(255, 183, 75, 0) 100%
-                );
+                background: linear-gradient(180deg, #FFB74B 59.9%, #FFFFFF 100%);
                 padding: 10px;
                 border-radius: 10px;
                 display: inline-block;
-                width: 20vw !important;
+                width: 22vw !important;
               }
 
               .recipe-card:hover {
@@ -27,29 +23,34 @@ class ProfileCard extends HTMLElement {
               }
         
               .recipe-card .card-title {
-                font-size: 28px;
+                font-size: 1.8vw;
                 font-family: "Alegreya Sans SC";
                 font-weight: 700;
                 display: inline-block;
               }
         
               .share-icon {
-                font-size: 30px !important;
+                font-size: 2vw !important;
                 margin-left: 3%;
                 float: right;
                 line-height: 1.2em;
               }
         
               .comments-icon {
-                font-size: 15px;
+                font-size: 1.5vw !important;
               }
         
-              .comments-count {
-                font-size: 15px !important;
-              }
 
               .stats-container {
                 margin-top: 15%;
+              }
+
+              .views-icon {
+                font-size: 1.5vw !important;
+              }
+
+              .star-icon {
+                font-size: 1vw !important;
               }
             </style>
           </head>
@@ -61,20 +62,20 @@ class ProfileCard extends HTMLElement {
                 <i class="material-icons share-icon"> share </i>
                <p style="font-size: 0.95vw; color: rgb(117, 117, 117); margin-top: 0 !important; margin-left: 2% !important;">Category: ${category}</p>
                 <p class="card-text">
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
+                  <span class="material-icons star-icon"> star </span>
+                  <span class="material-icons star-icon"> star </span>
+                  <span class="material-icons star-icon"> star </span>
+                  <span class="material-icons star-icon"> star </span>
+                  <span class="material-icons star-icon"> star </span>
                 </p>
                 <div class="stats-container">
                   <div class="stats">
-                    <span class="material-icons"> visibility </span>
-                    <h6 style="font-size: 15px">15 Recipes</h6>
+                    <span class="material-icons views-icon"> visibility </span>
+                    <h6 style="font-size: 1vw">15 Recipes</h6>
                   </div>
                   <div class="stats" style="float: right; margin: 0%">
                     <span class="material-icons comments-icon"> chat </span>
-                    <h6 style="font-size: 8px" class="comments-count">
+                    <h6 style="font-size: 1vw !important" class="comments-count">
                       30K Followers
                     </h6>
                   </div>
