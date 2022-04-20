@@ -1,9 +1,10 @@
 class ProfileCard extends HTMLElement {
-  connectedCallback() {
-    var title = this.attributes.title.value;
-    var imgPath = this.attributes.imgPath.value;
+    connectedCallback() {
+        var title = this.attributes.title.value;
+        var imgPath = this.attributes.imgPath.value;
+        var category = this.attributes.category.value;
 
-    this.innerHTML = `
+        this.innerHTML = `
         <!DOCTYPE html>
         <html>
           <head>
@@ -17,6 +18,7 @@ class ProfileCard extends HTMLElement {
                 padding: 10px;
                 border-radius: 10px;
                 display: inline-block;
+                width: 20vw !important;
               }
 
               .recipe-card:hover {
@@ -45,6 +47,10 @@ class ProfileCard extends HTMLElement {
               .comments-count {
                 font-size: 15px !important;
               }
+
+              .stats-container {
+                margin-top: 15%;
+              }
             </style>
           </head>
           <body>
@@ -53,12 +59,13 @@ class ProfileCard extends HTMLElement {
               <div class="card-body">
                 <h5 class="card-title">${title}</h5>
                 <i class="material-icons share-icon"> share </i>
+               <p style="font-size: 0.95vw; color: rgb(117, 117, 117); margin-top: 0 !important; margin-left: 2% !important;">Category: ${category}</p>
                 <p class="card-text">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
+                  <span class="material-icons"> star </span>
+                  <span class="material-icons"> star </span>
+                  <span class="material-icons"> star </span>
+                  <span class="material-icons"> star </span>
+                  <span class="material-icons"> star </span>
                 </p>
                 <div class="stats-container">
                   <div class="stats">
@@ -67,7 +74,7 @@ class ProfileCard extends HTMLElement {
                   </div>
                   <div class="stats" style="float: right; margin: 0%">
                     <span class="material-icons comments-icon"> chat </span>
-                    <h6 style="font-size: 10px" class="comments-count">
+                    <h6 style="font-size: 8px" class="comments-count">
                       30K Followers
                     </h6>
                   </div>
@@ -78,7 +85,7 @@ class ProfileCard extends HTMLElement {
         </html>
         
         `;
-  }
+    }
 }
 
 customElements.define("profile-card", ProfileCard);

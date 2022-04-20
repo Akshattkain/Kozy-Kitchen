@@ -102,6 +102,7 @@
             username='${recipe['username']}'
             complexity='${recipe['complexity']}'
             description='${recipe['description']}'
+            category='${recipe['category']}'
             imgPath='${recipe['img_dish']}'
             onclick='viewRecipe(this.id)'
            ></feed-card>`

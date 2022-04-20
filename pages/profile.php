@@ -104,6 +104,7 @@
             id='${recipe['id']}'
             title='${recipe['title']}'
             imgPath='${recipe['img_dish']}'
+            category='${recipe['category']}'
             onclick='viewRecipe(this.id)'
             style="display: inline-block;"
            ></profile-card>

@@ -5,6 +5,7 @@ class FeedCard extends HTMLElement {
         var complexity = this.attributes.complexity.value;
         var username = this.attributes.username.value;
         var imgPath = this.attributes.imgPath.value;
+        var category = this.attributes.category.value;
         var complexityColor =
             complexity == "Easy" ?
             "green" :
@@ -21,6 +22,7 @@ class FeedCard extends HTMLElement {
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title" >${title}</h5>
+                    <p style="font-size: 1.5vw; color: rgb(117, 117, 117); margin-top: 0 !important; margin-left: 2% !important;">Category: ${category}</p>
                     <span class="material-icons" style="font-size: 35px; float: right;"> share </span>
                     <span class="material-icons" style="font-size: 35px; float: right; margin-right: 10px"> favorite </span>
                     <p style="margin-left: 2%; font-size: 32px;">${description}</p>

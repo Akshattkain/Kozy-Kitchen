@@ -36,7 +36,7 @@ $row = mysqli_fetch_assoc($result);
             <p><?php echo $row['description'] ?></p>
         </div>        
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2% !important;">Ingredients</h1>
-        <p class="ingredients"><?php echo $row['ingredients'] ?></p>
+        <p class="ingredients"><?php echo nl2br($row['ingredients']) ?></p>
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2% !important;">Cook Time</h1>
         <br>
         <div class="stats">
@@ -45,7 +45,7 @@ $row = mysqli_fetch_assoc($result);
         </div>
 
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 4%;">Directions</h1>
-        <p class="directions"><?php echo $row['directions'] ?></p>
+        <p class="directions"><?php echo nl2br($row['directions']) ?></p>
         <h1 class="heading" style="font-size: 3vw !important; margin-top: 2%;">Servings</h1>
         <div class="stats">
             <br>
