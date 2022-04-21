@@ -24,7 +24,7 @@ $row = mysqli_fetch_assoc($result);
             <h1 class="heading"><?php echo $row['title'] ?></h1>
             <img src=<?php echo "../uploads/".$row['img_dish'] ?>>
             <p style="font-size: 1.5vw; color: rgb(117, 117, 117); margin-top: 0 !important; margin-left: 2% !important;">Category: <?php echo $row['category'] ?></p>
-            <p style="font-weight: 700;">3 Likes| 3 Comments | 3 Views</p>
+            <p style="font-weight: 700;">1k Likes| 560 Comments | 5k Views</p>
             <div class="rating">
                 <span class="material-icons" style="margin-left: 2% !important;"> star </span>
                 <span class="material-icons" style="margin-left: 1% !important;"> star </span>
